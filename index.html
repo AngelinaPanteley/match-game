@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match-Match Game</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body>
+  <main class="wrapper">
+    <section class="welcome-board">
+      <h1>Welcome to Match-Match Game!</h1>
+      <article>
+        <h2>About This Game:</h2>
+        <p>Match-Match Game is a memory game where the object is to find pairs.</p>
+        <p>When the game begins all the pictures are hidden.</p>
+      </article>
+      <article>
+        <h2>How to Play:</h2>
+        <ol>
+          <li>Select two cards to try to match the pictures.</li>
+          <li>If you match the pictures they will disapear and you can go again.</li>
+          <li>If they don't match the computer turn them.</li>
+          <li>If you match all the pictures you are the winner!</li>
+          <li>Have fun =)</li>
+        </ol>
+      </article>
+      <article>
+        <h2>Settings:</h2>
+        <form class="settings" name="settings">
+          <p>Choose the theme of cards:</p>
+          <fieldset class="choose-theme">
+            <input type="radio" id="theme1" name="theme" checked />
+            <label for="theme1"><img src="images/theme1.jpg" /></label>
+
+            <input type="radio" id="theme2" name="theme"/>
+            <label for="theme2"><img src="images/theme2.jpg" /></label>
+
+            <input type="radio" id="theme3" name="theme"/>
+            <label for="theme3"><img src="images/theme3.jpg" /></label>
+          </fieldset>
+          <p>Choose game difficulty:</p>
+          <fieldset class="choose-difficulty">
+            <input type="radio" id="dif1" name="difficulty" checked />
+            <label for="dif1">Low (5*2)</label>
+
+            <input type="radio" id="dif2" name="difficulty"/>
+            <label for="dif2">Medium (6*3)</label>
+
+            <input type="radio" id="dif3" name="difficulty"/>
+            <label for="dif3">High (8*3)</label>
+          </fieldset>
+          <input type="submit" name="submit-btn" value="Start Game" id="submit-settings"/>
+        </form>
+      </article>
+    </section>
+    <section class="board">
+    </section>
+  </main>
+  <script type="text/javascript" src="scripts/Game.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>

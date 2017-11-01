@@ -1,0 +1,64 @@
+input[type="radio"]
+  display: none
+
+  & + label
+    color: #d4dfe3
+    font-size: 1.2rem
+    line-height: 2rem
+    display: inline-block
+    margin: 10px
+    width: 200px
+    height: 50px
+    text-align: center
+    line-height: 43px
+    position: relative
+    overflow: hidden
+    cursor: pointer
+
+    img
+      width: 100%
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+
+  &:checked + label
+    border: 5px solid #eed1cb
+
+input[type="submit"],
+button
+  background: #eed1cb
+  border: none
+  outline: none
+  font-size: 27px
+  font-family: 'Bebas', 'Calibri', sans-serif
+  color: #393f4f
+  padding: 20px 120px
+  margin: 0 auto
+  display: block
+  margin-bottom: 20px
+  border-radius: 6px
+  cursor: pointer
+  transition: transform .3s
+  box-shadow: 3px 3px #393f4f
+
+input[type="submit"]:active,
+button:active
+  box-shadow: none
+  transform: translate(3px, 3px)
+  transition: transform .3s
+
+form.settings
+  margin-bottom: 40px
+
+  fieldset
+    width: 707px
+    margin: 0 auto
+
+    &.choose-theme
+      label
+        height: 125px
+
+      input[type="radio"]:checked + label
+        height: 150px
+        width: 220px
