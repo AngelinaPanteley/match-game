@@ -7,7 +7,7 @@
 </head>
 <body>
   <main class="wrapper">
-    <section class="welcome-board">
+    <section class="welcome-board show">
       <h1>Welcome to Match-Match Game!</h1>
       <article>
         <h2>About This Game:</h2>
@@ -29,33 +29,44 @@
         <form class="settings" name="settings">
           <p>Choose the theme of cards:</p>
           <fieldset class="choose-theme">
-            <input type="radio" id="theme1" name="theme" checked />
+            <input type="radio" id="theme0" name="theme" checked />
+            <label for="theme0"><img src="images/theme0.jpg" /></label>
+
+            <input type="radio" id="theme1" name="theme"/>
             <label for="theme1"><img src="images/theme1.jpg" /></label>
 
             <input type="radio" id="theme2" name="theme"/>
             <label for="theme2"><img src="images/theme2.jpg" /></label>
-
-            <input type="radio" id="theme3" name="theme"/>
-            <label for="theme3"><img src="images/theme3.jpg" /></label>
           </fieldset>
           <p>Choose game difficulty:</p>
           <fieldset class="choose-difficulty">
-            <input type="radio" id="dif1" name="difficulty" checked />
-            <label for="dif1">Low (5*2)</label>
+            <input type="radio" id="dif0" name="difficulty" checked />
+            <label for="dif0">Low (5*2)</label>
+
+            <input type="radio" id="dif1" name="difficulty"/>
+            <label for="dif1">Medium (6*3)</label>
 
             <input type="radio" id="dif2" name="difficulty"/>
-            <label for="dif2">Medium (6*3)</label>
-
-            <input type="radio" id="dif3" name="difficulty"/>
-            <label for="dif3">High (8*3)</label>
+            <label for="dif2">High (8*3)</label>
           </fieldset>
-          <input type="submit" name="submit-btn" value="Start Game" id="submit-settings"/>
         </form>
+        <button id="play-btn">Start Game</button>
       </article>
     </section>
-    <section class="board">
+    <form name=timer class="timer-container">  
+      <input name=stopwatch size=10 value="00:00.00" enable="false" readonly/>   
+    </form>
+    <section class="board" id="game-board">
     </section>
+    <button class="end-btn" id="end-btn">End Game</button>
+    <section class="congrats-board">
+      <h2>GAME COMPLETE</h2>
+      <img src="images/congrats.png"/>
+      <h2>Your Score:<span id="score-output"></span></h2>
+    </section>
+    <button class="new-start-btn" id="new-start-btn">Start New Game</button>
   </main>
+  <script type="text/javascript" src="scripts/Timer.js"></script>
   <script type="text/javascript" src="scripts/Game.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
 </body>

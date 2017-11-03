@@ -1,11 +1,26 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-  let submitBtn = document.getElementById('submit-settings');
-  let currentGame;
-
-  submitBtn.addEventListener('click', function( event ) {
+  document.getElementById('play-btn').addEventListener('click', function( event ) {
     let settings = readSettingsForm(document.forms.settings);
-    currentGame = new Game(settings.theme, settings.difficulty);
+    let currentGame = new Game(settings.theme, settings.difficulty);
+    currentGame.createBoard();
+    let timer = new Timer(document.timer.stopwatch);
+    timer.start();
+
+    currentGame.board.addEventListener('click', function(evt) {
+      currentGame.clickCard(evt);
+    });
+
+    document.getElementById('end-btn').addEventListener('click', function( event ) {
+      currentGame.destroyBoard();
+      currentGame.returnToWelcomeBoard();
+      timer.stop();
+    });
+
+    document.getElementById('new-start-btn').addEventListener('click', function( event ) {
+      currentGame.destroyScoreBoard();
+      currentGame.returnToWelcomeBoard();
+    });
   });
 
 });
