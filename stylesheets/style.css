@@ -7,11 +7,11 @@ body {
   word-spacing: 0.3rem; }
 
 h1 {
+  color: #eed1cb;
   font-family: "Bebas", "Calibri", sans-serif;
   font-size: 2.7rem;
   line-height: 6.6rem;
-  text-align: center;
-  color: #eed1cb; }
+  text-align: center; }
 
 h2,
 h3 {
@@ -21,16 +21,16 @@ h3 {
   text-align: center; }
   h2 span,
   h3 span {
-    font-size: 45px;
     color: #21b4ac;
-    margin-left: 20px; }
+    font-size: 4.5rem;
+    margin-left: 2rem; }
 
 p,
 li {
   color: #adbbbc;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding: 0 20px; }
+  padding: 0 2rem; }
 
 p {
   text-align: center; }
@@ -42,42 +42,42 @@ input[type="radio"] {
   display: none; }
   input[type="radio"] + label {
     color: #d4dfe3;
-    font-size: 1.2rem;
-    line-height: 2rem;
+    cursor: pointer;
     display: inline-block;
-    margin: 10px;
-    width: 200px;
+    font-size: 1.2rem;
     height: 50px;
-    text-align: center;
+    line-height: 2rem;
     line-height: 43px;
-    position: relative;
+    margin: 10px;
     overflow: hidden;
-    cursor: pointer; }
+    position: relative;
+    text-align: center;
+    width: 200px; }
     input[type="radio"] + label img {
-      width: 100%;
+      left: 0;
       position: absolute;
       top: 50%;
-      left: 0;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      width: 100%; }
   input[type="radio"]:checked + label {
     border: 5px solid #eed1cb; }
 
 input[type="submit"],
 button {
   background: #eed1cb;
-  border: none;
-  outline: none;
-  font-size: 27px;
-  font-family: "Bebas", "Calibri", sans-serif;
-  color: #393f4f;
-  padding: 20px 120px;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 20px;
   border-radius: 6px;
+  border: none;
+  box-shadow: 3px 3px #393f4f;
+  color: #393f4f;
   cursor: pointer;
-  transition: transform 0.3s;
-  box-shadow: 3px 3px #393f4f; }
+  display: block;
+  font-family: "Bebas", "Calibri", sans-serif;
+  font-size: 27px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 20px 120px;
+  transition: transform 0.3s; }
 
 input[type="submit"]:active,
 button:active {
@@ -88,8 +88,8 @@ button:active {
 form.settings {
   margin-bottom: 40px; }
   form.settings fieldset {
-    width: 707px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 707px; }
     form.settings fieldset.choose-theme label {
       height: 125px; }
     form.settings fieldset.choose-theme input[type="radio"]:checked + label {
@@ -100,20 +100,15 @@ form.timer-container {
   text-align: center; }
   form.timer-container input {
     background: #eed1cb;
-    border: none;
-    outline: none;
-    font-size: 27px;
-    font-family: "Bebas", "Calibri", sans-serif;
-    color: #393f4f;
-    padding: 20px 102px;
-    display: inline-block;
     border-radius: 6px;
+    border: none;
+    color: #393f4f;
+    display: inline-block;
+    font-family: "Bebas", "Calibri", sans-serif;
+    font-size: 27px;
+    outline: none;
+    padding: 20px 102px;
     text-align: center; }
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box; }
 
 .wrapper {
   background: url(../images/back.gif);
@@ -128,15 +123,15 @@ form.timer-container {
 .welcome-board,
 .board,
 .congrats-board {
-  width: 80%;
   background: #707486;
+  border: 5px solid #383e4e;
   margin: 0 auto;
-  border: 5px solid #383e4e; }
+  width: 80%; }
 
 article ol {
+  margin: 0 auto;
   padding-left: 40px;
-  width: 700px;
-  margin: 0 auto; }
+  width: 700px; }
 
 .welcome-board,
 .board,
@@ -154,11 +149,11 @@ article ol {
     display: block; }
 
 .congrats-board.show {
-  height: 500px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
+  height: 500px;
+  justify-content: space-around; }
   .congrats-board.show img {
     width: 400px; }
 
@@ -166,78 +161,65 @@ article ol {
 .congrats-board {
   min-width: 755px; }
 
+.board.show {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-top: 40px; }
+
 .card {
+  cursor: pointer;
   display: inline-block;
-  width: 150px;
   height: 200px;
-  margin: 0;
+  margin: 0 10px 10px 0;
   overflow: visible;
   position: relative;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  cursor: pointer; }
+  width: 150px; }
+  .card img {
+    left: 50%;
+    max-height: 75%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
 figure.front,
 figure.back {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
+  backface-visibility: hidden;
   background: #fff;
   border-radius: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px; }
+  display: inline-block;
+  height: 100%;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform 0.5s linear 0s;
+  width: 100%; }
+
+figure.back {
+  transform: perspective(600px) rotateY(180deg); }
+
+.card.clicked figure.front {
+  transform: perspective(600px) rotateY(-180deg); }
+.card.clicked figure.back {
+  transform: perspective(600px) rotateY(0deg); }
+.card.clicked.transparent {
+  opacity: 0;
+  transition: opacity 0.2s; }
 
 .theme0 figure.front,
 .theme0 figure.back {
   background: #addce6; }
 
-figure.front {
-  position: absolute;
-  transform: perspective(600px) rotateY(0deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s; }
-
-figure.back {
-  position: absolute;
-  transform: perspective(600px) rotateY(180deg);
-  backface-visibility: hidden;
-  transition: transform 0.5s linear 0s; }
-
-.card.clicked figure.front {
-  transform: perspective(600px) rotateY(-180deg); }
-
-.card.clicked figure.back {
-  transform: perspective(600px) rotateY(0deg); }
-
-.card.clicked.transparent {
-  opacity: 0;
-  transition: opacity 0.2s; }
-
-.card img {
-  max-height: 75%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
 .theme1 figure.back img {
-  max-width: 90%;
-  max-height: 90%; }
+  max-height: 90%;
+  max-width: 90%; }
 
 figure.front img {
-  max-height: 100%;
-  height: 100%; }
-
-section.board.show {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 10px;
-  padding-top: 40px;
-  padding-bottom: 40px; }
+  height: 100%;
+  max-height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

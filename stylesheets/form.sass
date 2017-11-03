@@ -3,24 +3,24 @@ input[type="radio"]
 
   & + label
     color: #d4dfe3
-    font-size: 1.2rem
-    line-height: 2rem
-    display: inline-block
-    margin: 10px
-    width: 200px
-    height: 50px
-    text-align: center
-    line-height: 43px
-    position: relative
-    overflow: hidden
     cursor: pointer
+    display: inline-block
+    font-size: 1.2rem
+    height: 50px
+    line-height: 2rem
+    line-height: 43px
+    margin: 10px
+    overflow: hidden
+    position: relative
+    text-align: center
+    width: 200px
 
     img
-      width: 100%
+      left: 0
       position: absolute
       top: 50%
-      left: 0
       transform: translateY(-50%)
+      width: 100%
 
   &:checked + label
     border: 5px solid #eed1cb
@@ -28,19 +28,19 @@ input[type="radio"]
 input[type="submit"],
 button
   background: #eed1cb
-  border: none
-  outline: none
-  font-size: 27px
-  font-family: 'Bebas', 'Calibri', sans-serif
-  color: #393f4f
-  padding: 20px 120px
-  margin: 0 auto
-  display: block
-  margin-bottom: 20px
   border-radius: 6px
-  cursor: pointer
-  transition: transform .3s
+  border: none
   box-shadow: 3px 3px #393f4f
+  color: #393f4f
+  cursor: pointer
+  display: block
+  font-family: 'Bebas', 'Calibri', sans-serif
+  font-size: 27px
+  margin: 0 auto
+  margin-bottom: 20px
+  outline: none
+  padding: 20px 120px
+  transition: transform .3s
 
 input[type="submit"]:active,
 button:active
@@ -52,8 +52,8 @@ form.settings
   margin-bottom: 40px
 
   fieldset
-    width: 707px
     margin: 0 auto
+    width: 707px
 
     &.choose-theme
       label
@@ -68,12 +68,12 @@ form.timer-container
 
   input
     background: #eed1cb
-    border: none
-    outline: none
-    font-size: 27px
-    font-family: "Bebas", "Calibri", sans-serif
-    color: #393f4f
-    padding: 20px 102px
-    display: inline-block
     border-radius: 6px
+    border: none
+    color: #393f4f
+    display: inline-block
+    font-family: "Bebas", "Calibri", sans-serif
+    font-size: 27px
+    outline: none
+    padding: 20px 102px
     text-align: center

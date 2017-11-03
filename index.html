@@ -7,6 +7,7 @@
 </head>
 <body>
   <main class="wrapper">
+
     <section class="welcome-board show">
       <h1>Welcome to Match-Match Game!</h1>
       <article>
@@ -53,18 +54,24 @@
         <button id="play-btn">Start Game</button>
       </article>
     </section>
-    <form name=timer class="timer-container">  
-      <input name=stopwatch size=10 value="00:00.00" enable="false" readonly/>   
+
+    <form name=timer class="timer-container">
+      <input name=stopwatch size=10 value="00:00.00" enable="false" readonly/>
     </form>
+
     <section class="board" id="game-board">
     </section>
+
     <button class="end-btn" id="end-btn">End Game</button>
+
     <section class="congrats-board">
       <h2>GAME COMPLETE</h2>
       <img src="images/congrats.png"/>
       <h2>Your Score:<span id="score-output"></span></h2>
     </section>
+
     <button class="new-start-btn" id="new-start-btn">Start New Game</button>
+
   </main>
   <script type="text/javascript" src="scripts/Timer.js"></script>
   <script type="text/javascript" src="scripts/Game.js"></script>
